@@ -66,7 +66,7 @@ const config = {
     },
     {
       name:"科学上网",
-      icon:"rss,
+      icon:"rss",
       list:[
         {
           url:"https://www.cloudflare-cn.com/",

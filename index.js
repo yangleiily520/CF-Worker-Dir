@@ -2,9 +2,9 @@
  *  自定义网站配置 
  */
 const config = {
-  title: "自定义导航",                 //write your website title
-  subtitle: "Cloudflare Workers Dir", //write your website subtitle
-  logo_icon: "sitemap",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
+  title: "杨磊的导航网站",                 //write your website title
+  subtitle: "常用搜索引擎与网站分享", //write your website subtitle
+  logo_icon: "zoom-out",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
   hitokoto: true,                     //use hitokoto or not
   search:true,                        //enable search function
   search_engine:[                     //choose search engine which you use
@@ -39,54 +39,105 @@ const config = {
   },
   lists: [                            //Url list
     {
-      name:"技术",
+      name:"网站分享",
       icon:"code",
       list:[
         {
-          url:"https://oschina.net/",
-          name:"开源中国",
-          desc:"程序员集散地"
+          url:"https://175dt.com/",
+          name:"梦幻题库",
+          desc:"梦幻西游答题哭"
         },
         {
-          url:"https://v2ex.com",
-          name:"V2EX",
-          desc:"程序员集散地"
+          url:"https://yangleiily.icoc.vc/",
+          name:"杨磊的网站",
+          desc:"个人网站"
         },
         {
-          url:"https://csdn.net/",
-          name:"CSDN技术社区",
-          desc:"程序员集散地"
+          url:"https://loader.fo/en/",
+          name:"YouTube视频下载",
+          desc:"视频下载平台"
         },
         {
-          url:"https://github.com/",
-          name:"Github",
-          desc:"程序员集散地"
+          url:"https://www.yangleiily.us.kg/",
+          name:"杨磊的导航网站",
+          desc:"自建导航网站"
         },
       ]
     },
     {
-      name:"学习",
+      name:"科学上网",
+      icon:"wifi",
+      list:[
+        {
+          url:"https://www.cloudflare-cn.com/",
+          name:"cloudflare",
+          desc:"随时随地连接、保护和构建"
+        },
+        {
+          url:"https://stock.hostmonit.com/CloudFlareYes/",
+          name:"优选IP",
+          desc:"全球主机监控 - 国内外VPS"
+        },
+        {
+          url:"https://cloudflare-scanner.vercel.app/",
+          name:"Cloudflare Scanner",
+          desc:"Cloudflare 优选IP"
+        },
+        {
+          url:"https://yangleiily.yangleiily.workers.dev/",
+          name:"节点池",
+          desc:"自己搭建节点池"
+        },
+      ]
+    },
+      name:"节点分享",
+      icon:"wifi",
+      list:[
+        {
+          url:"https://www.freeclashnode.com/",
+          name:"FreeClashNode",
+          desc:"每日更新SSR、V2ray和Clash等节点"
+        },
+        {
+          url:"https://clashgithub.com/",
+          name:"免费Clash节点",
+          desc:"免费节点每日分享"
+        },
+        {
+          url:"https://xconfig.pages.dev/index2/",
+          name:"Configs List",
+          desc:"github网站制作"
+        },
+        {
+          url:"https://itsyebekhe.github.io/HiN-VPN/",
+          name:"HiN VPN",
+          desc:"可选国家、协议等"
+        },
+      ]
+    },
+    {
+      name:"博客网站",
       icon:"graduation cap",
       list:[
         {
-          url:"https://w3school.com.cn/",
-          name:"W3school在线教程",
-          desc:"程序员集散地"
+          url:"https://yanglei.nyc.mn/",
+          name:"杨磊的博客",
+          desc:"hashnode"
         },
         {
-          url:"https://runoob.com/",
-          name:"菜鸟教程",
-          desc:"程序员集散地"
+          url:"https://blog520.000.pe/",
+          name:"杨磊的分享博客",
+          desc:"infinityfree"
         },
         {
-          url:"https://segmentfault.com/",
-          name:"思否社区",
-          desc:"程序员集散地"
+          url:"https://www.yanglei.us.kg/",
+          name:"杨磊博客",
+          desc:"Blogger"
         },
         {
-          url:"https://jianshu.com/",
-          name:"简书",
-          desc:"程序员集散地"
+          url:"http://www.blog520.us.kg/",
+          name:"杨磊的GitHub博客",
+          desc:"github"
         },
       ]
     }
@@ -109,14 +160,9 @@ addEventListener('fetch', event => {
 /*通过分析链接 实时获取favicon
 * @url 需要分析的Url地址
 */
-function getFavicon(url){
-  if(url.match(/https{0,1}:\/\//)){
-    //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];
-    return "https://www.google.cn/s2/favicons?sz=64&domain_url=" + url;
-  }else{
-    //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;
-    return "https://www.google.cn/s2/favicons?sz=64&domain_url=http://" + url;
-  } 
+function getFavicon(url) {
+  const domain = url.replace(/^https?:\/\//, '').split('/')[0];
+  return `https://icons.duckduckgo.com/ip3/${domain}.ico`;
 }
 
 /** Render Functions

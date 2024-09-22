@@ -60,13 +60,13 @@ const config = {
         {
           url:"https://www.yangleiily.us.kg/",
           name:"杨磊的导航网站",
-          desc:"自建导航网站"
+          desc:"常用搜索引擎与网站分享"
         },
       ]
     },
     {
       name:"科学上网",
-      icon:"wifi",
+      icon:"rss,
       list:[
         {
           url:"https://www.cloudflare-cn.com/",

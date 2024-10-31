@@ -169,7 +169,7 @@ function getFavicon(url) {
  */
 
 function renderIndex(){
-  const footer = el('footer',[],el('div',['class="footer"'],'Powered by' + el('a',['class="ui label"','https://github.com/yangleiily520/CF-Worker-Dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License')));
+  const footer = el('footer',[],el('div',['class="footer"'],'杨磊导航站' + el('a',['class="ui label"','https://github.com/yangleiily520/CF-Worker-Dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'yangleiily@gmail.com')));
   return renderHeader() + renderMain() + footer;
 }
 

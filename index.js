@@ -574,12 +574,12 @@ const config = {
           desc:""
         },
         {
-          url:"https://www.meiguodizhi.com/",
+          url:"https://www.meiguodizhi.com",
           name:"美国地址生成",
           desc:""
         },
         {
-          url:"https://ratenn.com/american.html/",
+          url:"https://ratenn.com/american.html",
           name:"美国地址生成器",
           desc:""
         },

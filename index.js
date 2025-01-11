@@ -1026,7 +1026,7 @@ const config = {
           desc:""
         },
         {
-          url:"https://www.serv00.com/",
+          url:"https://panel7.serv00.com",
           name:"serv00",
           desc:""
         },
@@ -1220,7 +1220,7 @@ const config = {
           desc:""
         },
         {
-          url:"https://jubt.fun/cn/index.html/",
+          url:"https://jubt.top",
           name:"聚BT - 磁力资源",
           desc:""
         },
@@ -1332,7 +1332,7 @@ const config = {
           desc:"hashnode"
         },
         {
-          url:"https://blog520.000.pe/",
+          url:"https://blog110.us.kg/",
           name:"杨磊的分享博客",
           desc:"infinityfree"
         },
